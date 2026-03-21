@@ -16,24 +16,11 @@ import { TrustSection } from './components/TrustSection';
 
 type ThemeMode = 'light' | 'dark';
 
-function getInitialTheme(): ThemeMode {
-  const savedTheme = window.localStorage.getItem('virenscent-theme');
-
-  if (savedTheme === 'light' || savedTheme === 'dark') {
-    return savedTheme;
-  }
-
-  return window.matchMedia('(prefers-color-scheme: dark)').matches
-    ? 'dark'
-    : 'light';
-}
-
 export default function App() {
-  const [theme, setTheme] = useState<ThemeMode>(getInitialTheme);
+  const [theme, setTheme] = useState<ThemeMode>('light');
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', theme === 'dark');
-    window.localStorage.setItem('virenscent-theme', theme);
   }, [theme]);
 
   return (
