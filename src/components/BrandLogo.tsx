@@ -1,4 +1,4 @@
-import logo from '../assets/virenscent-logo-optimized.png';
+import logo from '../assets/virenscent3-logo.png';
 
 type BrandLogoProps = {
   size?: 'sm' | 'md' | 'lg';
@@ -26,11 +26,7 @@ export function BrandLogo({
       <span
         className={`inline-flex items-center justify-center border border-brand/15 bg-white/85 shadow-soft dark:bg-white/10 ${sizeClasses[size]}`}
       >
-        <img
-          src={logo}
-          alt="Логотип Virenscent"
-          className="h-full w-full object-contain"
-        />
+        <img src={logo} alt="Virenscent logo" className="h-full w-full object-contain" />
       </span>
 
       {showName ? (
