@@ -1,4 +1,4 @@
-import logo from '../assets/virenscent2-logo.png';
+import logo from '../assets/virenscent-logo-optimized.png';
 
 type BrandLogoProps = {
   size?: 'sm' | 'md' | 'lg';

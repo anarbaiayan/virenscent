@@ -77,11 +77,11 @@
   }
 
   .glass-panel {
-    @apply rounded-4xl border border-white/40 bg-white/70 shadow-soft backdrop-blur-xl dark:border-white/10 dark:bg-white/5;
+    @apply rounded-[1.75rem] border border-white/40 bg-white/70 shadow-soft backdrop-blur-xl sm:rounded-4xl dark:border-white/10 dark:bg-white/5;
   }
 
   .surface-panel {
-    @apply rounded-4xl border bg-panel/90 shadow-soft backdrop-blur-xl;
+    @apply rounded-[1.5rem] border bg-panel/90 shadow-soft backdrop-blur-xl sm:rounded-4xl;
   }
 
   .premium-ring {
@@ -89,15 +89,15 @@
   }
 
   .button-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white shadow-glow transition duration-300 hover:-translate-y-0.5 hover:bg-brand/90;
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-brand px-5 py-3 text-sm font-semibold text-white shadow-glow transition duration-300 hover:-translate-y-0.5 hover:bg-brand/90 sm:px-6;
   }
 
   .button-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-line bg-white/70 px-6 py-3 text-sm font-semibold text-foreground transition duration-300 hover:-translate-y-0.5 hover:border-brand/40 hover:bg-brand-soft/50 dark:bg-white/5;
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-line bg-white/70 px-5 py-3 text-sm font-semibold text-foreground transition duration-300 hover:-translate-y-0.5 hover:border-brand/40 hover:bg-brand-soft/50 dark:bg-white/5 sm:px-6;
   }
 
   .input-field {
-    @apply h-14 w-full rounded-2xl border border-line bg-white/80 px-4 text-sm text-foreground outline-none transition focus:border-brand focus:ring-4 focus:ring-brand/10 dark:bg-white/5;
+    @apply h-12 w-full rounded-2xl border border-line bg-white/80 px-4 text-sm text-foreground outline-none transition focus:border-brand focus:ring-4 focus:ring-brand/10 sm:h-14 dark:bg-white/5;
   }
 
   .placeholder-card {
@@ -108,5 +108,9 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .details-reset summary::-webkit-details-marker {
+    display: none;
   }
 }
