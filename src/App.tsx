@@ -11,6 +11,7 @@ import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { HowItWorksSection } from './components/HowItWorksSection';
 import { PricingSection } from './components/PricingSection';
+import { SiteSeo } from './components/SiteSeo';
 import { SpacesSection } from './components/SpacesSection';
 import { TrustSection } from './components/TrustSection';
 
@@ -25,6 +26,7 @@ export default function App() {
 
   return (
     <div className="relative overflow-x-hidden">
+      <SiteSeo />
       <Header
         theme={theme}
         onToggleTheme={() =>
